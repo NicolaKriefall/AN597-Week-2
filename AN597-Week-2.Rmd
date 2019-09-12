@@ -1,30 +1,47 @@
 ---
-title: "nicfall_originalhwcode_01"
+title: "Nicfall_Originalhwcode_01"
 author: "Nicola Kriefall"
 date: "9/12/2019"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+# Module 04
+
+Homework for week 2 of AN597
+
+## Preliminaries
+
+<i>i.e.</i> installing packages
+
+```{r}
+#install.packages("stringr") #installing required package, remove # if you don't have this package installed yet
+library("stringr") #loading required package
 ```
 
-## R Markdown - modified x2
+## Challenge 1
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+First, create a vector of 1 word character strings comprising the first line of the novel Ulysses, by James Joyce: “Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed.”
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
+```{r}
+ulysses <- c("Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed.")
+u_split <- str_split(ulysses,pattern=" ",simplify=TRUE)
+u_split
 ```
 
-## Including Plots
+Then, extract every third element of this vector.
 
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{r}
+u2 = u_split[, seq(3, ncol(u_split), 3)]
+u2
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+# Challenge 2
+
+Given the matrix, m, below, extract the 2nd, 3rd, and 6th columns and assign them to the variable x
+
+```{r}
+m <- matrix(data=1:80,nrow=8,ncol=10,byrow=FALSE)
+m
+x <- m[,c(2,3,6)]
+x
+```
