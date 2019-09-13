@@ -173,4 +173,4 @@ str(dat)
 
 4. I accidentally named my homework wrong, but fixed it.
 
-5. Using markdown for the first time - I didn't realize if you don't hit 'knit' thne the .html document doesn't update with your new markdown changes.
+5. Using markdown for the first time - I didn't realize if you don't hit 'knit' then the .html document doesn't update with your new markdown changes.
