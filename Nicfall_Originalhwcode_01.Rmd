@@ -165,11 +165,12 @@ str(dat)
 
 # Challenges with the Challenges
 
-1. First problem was my time management. I was cocky & thought this hw wouldn't take me very long since I've been coding in R for over a year so I didn't plan a bunch of time for it, but I was definitely wrong, the challenges were challenging. 
+1. First problem was my time management. I was cocky & thought this hw wouldn't take me very long since I've been coding in R for over a year so I didn't plan a bunch of time for it, but I was definitely wrong, the challenges were challenging.
+
 2. The first one took me way too long, I'm ashamed to admit. 
 
 3. I'm still not sure if the output for the lists one is the right output. What if we had an example of the correct output on the homework assignment page? That doesn't tell us how to get there, but confirms whether we got there or not
 
 4. I accidentally named my homework wrong, but fixed it.
 
-That's all I got for challenges. I love learning how to use markdown for the first time!
+5. Using markdown for the first time - I didn't realize if you don't hit 'knit' thne the .html document doesn't update with your new markdown changes.
