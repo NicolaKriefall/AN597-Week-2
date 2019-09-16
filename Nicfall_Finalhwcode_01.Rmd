@@ -1,7 +1,7 @@
 ---
-title: "Nicfall_Originalhwcode_01"
+title: "Nicfall_Finalhwcode_01"
 author: "Nicola Kriefall"
-date: "9/12/2019"
+date: "9/15/2019"
 output: html_document
 ---
 
@@ -153,7 +153,7 @@ dat
 As a data frame, coerce the third column to be factor-valued
 
 ```{r}
-dat$V3 <- as.character(dat$V3)
+dat$V3 <- as.factor(dat$V3)
 dat
 ```
 
@@ -165,9 +165,9 @@ str(dat)
 
 # Challenges with the Challenges
 
-1. First problem was my time management. I was cocky & thought this hw wouldn't take me very long since I've been coding in R for over a year so I didn't plan a bunch of time for it, but I was definitely wrong, the challenges were challenging.
+1. First problem was my time management. I thought this hw wouldn't take me very long since I've been coding in R for over a year so I didn't plan a bunch of time for it, but the challenges were challenging.
 
-2. The first one took me way too long, I'm ashamed to admit. 
+2. The first one took me way too long 
 
 3. I'm still not sure if the output for the lists one is the right output. What if we had an example of the correct output on the homework assignment page? That doesn't tell us how to get there, but confirms whether we got there or not
 
