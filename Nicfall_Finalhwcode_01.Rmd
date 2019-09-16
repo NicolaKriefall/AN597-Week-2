@@ -1,0 +1,176 @@
+---
+title: "Nicfall_Originalhwcode_01"
+author: "Nicola Kriefall"
+date: "9/12/2019"
+output: html_document
+---
+
+# Module 04
+
+Homework for week 2 of AN597
+
+## Preliminaries
+
+<i>i.e.</i> installing packages
+
+```{r}
+#install.packages("stringr") #installing required package, remove # if you don't have this package installed yet
+library("stringr") #loading required package
+```
+
+## Challenge 1
+
+First, create a vector of 1 word character strings comprising the first line of the novel Ulysses, by James Joyce: “Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed.”
+
+```{r}
+ulysses <- c("Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed.")
+u_split <- str_split(ulysses,pattern=" ",simplify=TRUE)
+u_split
+```
+
+Then, extract every third element of this vector.
+
+```{r}
+u2 = u_split[, seq(3, ncol(u_split), 3)]
+u2
+```
+
+## Challenge 2
+
+```{r}
+m <- matrix(data=1:80,nrow=8,ncol=10,byrow=FALSE)
+```
+
+Given the matrix, m, above, extract the 2nd, 3rd, and 6th columns and assign them to the variable x
+
+```{r}
+x <- m[,c(2,3,6)]
+x
+```
+
+Given the matrix, m, above, extract the 6th to 8th row and assign them to the variable x
+
+```{r}
+x <- m[,c(6:8)]
+x
+```
+
+Given the matrix, m, above, extract the elements from row 2, column 2 to row 6, column 9 and assign them to the variable x
+
+```{r}
+x <- m[2:6,2:9]
+x
+```
+
+## Challenge 3
+
+Construct a 4-dimensional, 400 element array (5 x 5 x 4 x 4) named a consisting of the numbers 400 to 1 (i.e., a descending series)
+
+
+```{r}
+a <- array(data=400:1, dim=c(5,5,4,4))
+```
+
+Given this matrix, what would the following return?
+
+a[1, 1, 1, 2]
+```{r}
+a[1, 1, 1, 2]
+```
+
+a[2, 3, 2, ]
+```{r}
+a[2, 3, 2, ]
+```
+
+a[1:5, 1:5, 3, 3]
+```{r}
+a[1:5, 1:5, 3, 3]
+```
+
+## Challenge 4
+
+Create a list representing this (simplified) primate taxonomy. HINT: you can use lists as elements in a list.
+
+```{r}
+
+plat <- c("Cebidae",
+"Atelidae",
+"Pitheciidae")
+cata <- c("Cercopithecidae",
+"Hylobatidae",
+"Hominidae")
+
+anth <- list(plat,cata)
+names(anth) <- c("Platyrrhini", "Catarrhini")
+
+tars <- c("Tarsiidae")
+tars2 <- list(tars)
+
+hapl <- list(tars2,anth)
+names(hapl) <- c("Tarsioidea","Anthropoidea")
+
+lemu <- c("Cheirogaleidae",
+"Lepilemuridae",
+"Indriidae",
+"Lemuridae",
+"Daubentoniidae")
+lori <- c("Lorisidae",
+"Galagidae")
+stre <- list(lemu,lori)
+names(stre) <- c("Lemuroidea","Lorisoidea")
+
+Primates <- list(hapl,stre)
+names(Primates) <- c("Haplorhini","Strepsirhini")
+Primates
+
+```
+
+## Challenge 5
+
+Store the following numbers as a 5 x 3 matrix: 3, 0, 1 ,23, 1, 2, 33, 1, 1, 42, 0, 1, 41, 0, 2. Be sure to fill the matrix ROWWISE.
+
+```{r}
+list <- c(3, 0, 1 ,23, 1, 2, 33, 1, 1, 42, 0, 1, 41, 0, 2)
+mat <- matrix(unlist(list), byrow=TRUE, nrow=5)
+mat
+```
+
+Then, coerce the matrix to a data frame
+
+```{r}
+dat <- as.data.frame(mat)
+dat
+```
+
+As a data frame, coerce the second column to be logical-valued
+
+```{r}
+dat$V2 <- dat$V2 > 0
+dat
+```
+
+As a data frame, coerce the third column to be factor-valued
+
+```{r}
+dat$V3 <- as.character(dat$V3)
+dat
+```
+
+When you are done, use the str() command to show the data type for each variable in your dataframe.
+
+```{r}
+str(dat)
+```
+
+# Challenges with the Challenges
+
+1. First problem was my time management. I was cocky & thought this hw wouldn't take me very long since I've been coding in R for over a year so I didn't plan a bunch of time for it, but I was definitely wrong, the challenges were challenging.
+
+2. The first one took me way too long, I'm ashamed to admit. 
+
+3. I'm still not sure if the output for the lists one is the right output. What if we had an example of the correct output on the homework assignment page? That doesn't tell us how to get there, but confirms whether we got there or not
+
+4. I accidentally named my homework wrong, but fixed it.
+
+5. Using markdown for the first time - I didn't realize if you don't hit 'knit' then the .html document doesn't update with your new markdown changes.
